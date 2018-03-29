@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/s_general">
+        <SwitchPreference
+            android:showText="true"
+            android:defaultValue="false"
+            android:key="desactivar"
+            android:summary="@string/ss_habilitar"
+            android:title="@string/s_habilitar" />
+        <ListPreference
+            android:dialogTitle="@string/s_modo_titulo"
+            android:key="modo"
+            android:defaultValue="0"
+            android:entries="@array/l_modo"
+            android:entryValues="@array/v_modo"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:summary="@string/ss_modo"
+            android:title="@string/s_modo" />
+        <Preference
+            android:key="horarios"
+            android:selectable="true"
+            android:summary="@string/ss_reloj"
+            android:title="@string/s_reloj" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/s_lista">
+        <SwitchPreference
+            android:showText="false"
+            android:defaultValue="true"
+            android:key="admision"
+            android:summaryOff="@string/s_lista_n"
+            android:summaryOn="@string/s_lista_b"
+            android:title="@string/s_lista_modo" />
+        <Preference
+            android:key="select_app"
+            android:selectable="true"
+            android:title="@string/s_lista_selec"
+            android:summary="@string/ss_elegir_app"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/s_about">
+        <Preference
+            android:selectable="false"
+            android:summary="@string/s_alias"
+            android:key="version" />
+    </PreferenceCategory>
+</PreferenceScreen>
